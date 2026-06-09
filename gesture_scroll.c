@@ -12,6 +12,7 @@
 // Build notes:
 // 1) Project Properties -> General -> Character Set: Use Unicode Character Set
 // 2) To hide console: Linker -> System -> Subsystem: Windows (/SUBSYSTEM:WINDOWS)
+// git action test
 
 #define WIN32_LEAN_AND_MEAN
 #include <windows.h>
