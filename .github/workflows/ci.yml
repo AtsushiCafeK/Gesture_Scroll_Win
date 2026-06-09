@@ -11,11 +11,11 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Initialize MSVC
-      uses: ilammy/msvc-dev-cmd@v1
+      - name: Initialize MSVC
+        uses: ilammy/msvc-dev-cmd@v1
 
-    - name: Build C Program
-      run: cl.exe /O2 gesture_scroll.c /link user32.lib shell32.lib gdi32.lib
+      - name: Build C Program
+        run: cl.exe /O2 gesture_scroll.c /link user32.lib shell32.lib gdi32.lib
