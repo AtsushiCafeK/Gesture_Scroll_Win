@@ -10,14 +10,12 @@ jobs:
   build:
     runs-on: windows-latest
 
-steps:
+    steps:
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # MSVCコンパイラ（cl.exe）を使用するための環境設定
     - name: Initialize MSVC
       uses: ilammy/msvc-dev-cmd@v1
 
-    # C言語のソースファイルを直接コンパイル
     - name: Build C Program
       run: cl.exe /O2 gesture_scroll.c /link user32.lib shell32.lib gdi32.lib
